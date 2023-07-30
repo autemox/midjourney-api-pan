@@ -598,7 +598,8 @@ export class WsMessage {
     }
   }
   private removeWaitMjEvent(nonce: string) {
-    this.waitMjEvents.delete(nonce);
+    // FIXME: this.waitMjEvents.delete(nonce);
+    this.waitMjEvents.clear();
   }
   onceImage(nonce: string, callback: (data: MJEmit) => void) {
     const once = (data: MJEmit) => {
